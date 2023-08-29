@@ -8,13 +8,14 @@ const image = require('./controllers/image');
 
 const db = knex({
     client: 'pg',
-    connection: {
-      host : 'localhost',
-      port : 5432,
-      user : 'postgres',
-      password : 'test',
-      database : 'smart-brain'
-    }
+    connection: process.env.DATABASE_URL
+    // {
+    //   host : 'ccc.oregon-postgres.render.com',
+    //   port : 5432,
+    //   user : 'test_7nva_user',
+    //   password : 'yWH4MoVTYNAy3DjbjAIQiGLfHkQ2P1TV',
+    //   database : 'test_7nva'
+    // }
   });
 
 
